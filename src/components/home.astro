@@ -17,7 +17,7 @@ import SkillsList from "../React/SkillsList.tsx";
       <div class="flex flex-col lg:flex-row lg:items-start lg:gap-12">
 
         <!-- IZQUIERDA: título y subtítulo morado apilados -->
-        <div class="left-col flex-shrink-0 w-full lg:w-1/2">
+        <div class="left-col flex-shrink-0 w-full lg:w-2/5">
           <h1
             class="text-[var(--white)] font-medium leading-tight"
             style="font-size: 3.75rem; line-height: 1;"
@@ -33,13 +33,14 @@ import SkillsList from "../React/SkillsList.tsx";
           </h3>
         </div>
 
-        <!-- DERECHA: párrafo reducido en tamaño y con max-width para mejor composición -->
-        <div class="right-col mt-6 lg:mt-0 lg:pl-6 lg:w-1/2">
+        <!-- DERECHA: párrafo reducido en tamaño, justificado y más ancho -->
+        <div class="right-col mt-6 lg:mt-0 lg:pl-6 lg:w-3/5">
           <p class="paragraph-reduced text-[var(--white-icon)]">
-            I am a full-stack web developer with a strong focus on user experience (UX/UI) and results-driven digital marketing.
-            I combine technical skills in HTML, CSS, JavaScript, Node.js, and Express.js with a solid understanding of user behavior and conversion flow, creating functional, visually appealing, and strategically designed websites that meet business goals.
-            I have experience building websites using MVC architecture, intuitive user interfaces, and optimized user journeys, as well as implementing integrations with the META ecosystem (Facebook Pixel, Conversion API, Instagram Ads) to maximize tracking accuracy, segmentation, and ad performance.
-            My approach bridges <span class="text-[var(--sec)] shiny-sec">development and marketing</span> — every line of code is written to improve usability, speed, technical SEO, and conversion rates.
+           I am a Full-Stack Developer with focus on user experience (UX/UI) and results-driven digital marketing. According to the project, I combine technical skills in HTML, CSS, JavaScript, Node.js, and Express.js with a deep understanding of user behavior and strategy.
+           My work blends functionality, visual design, and business objectives to build responsive, goal-oriented websites. I have hands-on experience developing using the MVC architecture, crafting intuitive interfaces, and optimizing user journeys.
+           Additionally, I integrate META tools (Facebook Pixel, Conversion API, Instagram Ads) to enhance tracking accuracy and campaign performance.
+            
+           My approach bridges <span class="text-[var(--sec)] shiny-sec">development and marketing</span> — every line of code is written to improve usability, speed, technical SEO, and conversion rates.
           </p>
         </div>
       </div>
@@ -119,29 +120,39 @@ import SkillsList from "../React/SkillsList.tsx";
 
   /* Ajustes finos del layout */
   .subtitle-morado {
-    font-size: 1.25rem; /* md: ~3xl en tu original; lo reduzco para que quede armonioso debajo del título */
+    font-size: 1.25rem;
     line-height: 1.15;
     margin-top: 0.25rem;
   }
 
-  /* Párrafo reducido ~1/3 menos respecto a md:text-2xl (1.5rem).
-     Aquí lo fijo a 1rem en pantallas md+ para que visualmente sea ~2/3 del tamaño anterior. */
+  /* Párrafo: justificado, +2pt y 25% más ancho (todo dentro de este archivo) */
   .paragraph-reduced {
-    font-size: 0.95rem; /* base en móvil para mejor lectura */
-    line-height: 1.7;
-    max-width: 44rem; /* controla que no se extienda demasiado en pantallas muy grandes */
+    font-size: 1.125rem; /* incremento ≈ +2pt */
+    line-height: 1.8;
+    text-align: justify;
+    text-justify: inter-word;
+    max-width: 55rem;
+    margin: 0; /* evitar márgenes inesperados */
   }
 
-  /* En pantallas md o mayores, fijamos tamaño reducido (aprox 1rem) */
+  /* En pantallas md o mayores, confirmar tamaño y comportamiento */
   @media (min-width: 768px) {
     .paragraph-reduced {
-      font-size: 1rem; /* aquí está la reducción que pediste */
+      font-size: 1.125rem;
     }
     .subtitle-morado {
-      font-size: 1.375rem; /* un poco más grande en pantallas mayores */
+      font-size: 1.375rem;
     }
   }
 
-  /* Evitar que el texto derecho empuje el layout: */
-  .left-col, .right-col { min-width: 0; } /* útil para truncado / flex behavior */
+  /* Ajuste de anchos de columnas (solo en este archivo) */
+  .left-col { min-width: 0; }
+  .right-col { min-width: 0; }
+
+  /* Aseguramos la proporción: en lg la izquierda 40% y derecha 60% */
+  @media (min-width: 1024px) {
+    .left-col { width: 40%; }
+    .right-col { width: 60%; }
+  }
 </style>
+
