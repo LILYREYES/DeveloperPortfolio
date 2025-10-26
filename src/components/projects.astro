@@ -7,7 +7,7 @@ import velez from "../../public/velez.png";
 
 interface Project {
   title: string;
-  image: ImageMetadata;
+  image: string | ImageMetadata;
   link: string;
   preview: string;
   status: string;
@@ -15,31 +15,59 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "MoviesForDevs",
-    image: moviesfordevs as ImageMetadata,
-    link: "https://github.com/gothsec/MoviesForDevs",
-    preview: "https://movies-for-devs.vercel.app",
+    title: "WordPress and Elementor",
+    image: "DigitalDirectory.png",
+    link: "https://directoriodigital.net/",
+    preview: "https://directoriodigital.net/",
     status: "Deployed",
   },
   {
-    title: "StockIn",
-    image: stockin as ImageMetadata,
-    link: "https://github.com/gothsec/stockin-demo",
-    preview: "https://stockin-demo.vercel.app",
-    status: "On Development",
+    title: "Ecommerce and Meta Pixel Integration",
+    image: "WebsiteEcommerce.png",
+    link: "https://www.tiendasdigitalesysitiosweb.com/",
+    preview: "https://www.tiendasdigitalesysitiosweb.com/",
+    status: "Developed",
   },
   {
-    title: "Svgl.app",
-    image: svgl as ImageMetadata,
-    link: "https://github.com/pheralb/svgl",
-    preview: "https://svgl.app",
-    status: "Contributor",
+    title: "Design Nutrition Site and Meta Pixel, Google Analytics",
+    image: "NutritionSite.png",
+    link: "https://nutricionconannie.net/",
+    preview: "https://nutricionconannie.net/",
+    status: "Built",
+  },
+ {
+    title: "FIGMA APP restaurant",
+    image: "Foodexpress APP.png",
+    link: "https://staff-rhyme-77243944.figma.site/",
+    preview: "https://staff-rhyme-77243944.figma.site/",
+    status: "On Process",
   },
   {
-    title: "Rifas Velez Web",
-    image: velez as ImageMetadata,
-    link: "https://github.com/Buga-Software/rifasvelez-web",
-    preview: "https://www.rifasvelez.com",
+    title: "API FETCH USERSLIST",
+    image: "Userslist.png",
+    link: "file:///C:/Users/LILIA/OneDrive/Escritorio/UVM/fetch.html",
+    preview: "file:///C:/Users/LILIA/OneDrive/Escritorio/UVM/fetch.html",
+    status: "Developed",
+  },
+  {
+    title: "APIREST DOGS EXPLORER Postman",
+    image: "API REST Dogs.png",
+    link: "file:///C:/Users/LILIA/OneDrive/Escritorio/UVM/Ejercicio10API.html",
+    preview: "file:///C:/Users/LILIA/OneDrive/Escritorio/UVM/Ejercicio10API.html",
+    status: "Developed",
+  },
+  {
+    title: "API MVC User Management List",
+    image: "MVCUserslist.png",
+    link: "file:///C:/Users/LILIA/OneDrive/UVM/GITHUB/API%20MVC%20Clase%20tarea%2025/index.html",
+    preview: "file:///C:/Users/LILIA/OneDrive/UVM/GITHUB/API%20MVC%20Clase%20tarea%2025/index.html",
+    status: "Deployed",
+  },
+  {
+    title: "Calculator JS",
+    image: "calculadora.png",
+    link: "file:///C:/Users/LILIA/OneDrive/Escritorio/UVM/calculadora.html",
+    preview: "file:///C:/Users/LILIA/OneDrive/Escritorio/UVM/calculadora.html",
     status: "Deployed",
   },
 ];
@@ -64,7 +92,7 @@ const projects: Project[] = [
               class="block"
             >
               <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 mb-4">
-                <Image
+                <image: string | ImageMetadata;
                   src={project.image}
                   alt={project.title}
                   class="w-full h-48 md:h-72 object-cover group-hover:scale-105 transition-transform duration-300"
@@ -117,7 +145,7 @@ const projects: Project[] = [
     </div>
     <a
       target="_blank"
-      href="https://github.com/Gothsec?tab=repositories"
+      href="https://github.com/LILYREYES"
       aria-label="GitHub"
       class="w-full flex items-center justify-center gap-2 mt-9 text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-[var(--white-icon-tr)] p-3 rounded-full bg-[#1414149c] hover:bg-[var(--white-icon-tr)] hover:scale-105"
     >
