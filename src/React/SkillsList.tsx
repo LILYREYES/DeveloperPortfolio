@@ -37,20 +37,21 @@ const SkillsList = () => {
   const [openItem, setOpenItem] = useState<string | null>(null);
 
   const skills = {
+    "Frontend and Backend Development": [
+      "Frontend and backend development with scalable, client-oriented architecture.",
+      "The ability to collaborate with marketing, design, and sales teams to align technical execution with strategic goals.",
+      "SEO optimization and performance enhancements for better user experience and search engine rankings.",
+    ],
+    "Mobile Development": [
+      "Mobile-friendly web apps",
+      "Responsive design for various devices",
+    ],
     "Web Development": [
       "Single Page Applications (SPAs)",
       "Landing pages and business websites",
       "Portfolio websites",
     ],
-    "Mobile Development": [
-      "Mobile-friendly web apps",
-      "React Native mobile apps",
-    ],
-    "UI/UX Design & Prototyping": [
-      "UI design with Figma & Canva",
-      "UX research & improvements",
-      "Prototyping for websites & mobile apps",
-    ],
+
   };
 
   const toggleItem = (item: string) => {
